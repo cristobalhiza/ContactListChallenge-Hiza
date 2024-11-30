@@ -16,6 +16,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var adapter: ContactAdapter
     private val contactList = mutableListOf<Contact>()
+    private fun generateInitialContacts() {
+        val initialContacts = listOf(
+            Contact("Cristobal", "123123", true),
+            Contact("Fabian", "213123", false),
+            Contact("Claudia", "213132", true),
+            Contact("Cesar", "3231321", false)
+        )
+        contactList.addAll(initialContacts)
+    }
     private var isFilteringAvailable = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val fabAddContact = findViewById<FloatingActionButton>(R.id.fabAddContact)
         val btnFilterAvailable = findViewById<Button>(R.id.filterButton)
 
+        generateInitialContacts()
         setRecyclerViewAdapter(contactList)
 
         fabAddContact.setOnClickListener {
