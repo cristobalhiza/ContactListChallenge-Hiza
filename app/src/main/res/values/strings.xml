@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ContactListExample</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="enter_name">Enter name</string>
+    <string name="available">Available</string>
+    <string name="ver_contactos_disponibles">Ver contactos disponibles</string>
+    <string name="por_favor_llenar_todos_los_campos">Por favor llenar todos los campos</string>
+    <string name="contacto_agregado_exitosamente">Contacto agregado exitosamente!</string>
+    <string name="ver_contactos">Ver Contactos</string>
+    <string name="mostrar_todos">Mostrar Todos</string>
+    <string name="quitar_filtro">Quitar Filtro</string>
+    <string name="mostrar_disponibles">Mostrar Disponibles</string>
 </resources>

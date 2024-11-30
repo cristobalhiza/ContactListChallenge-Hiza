@@ -11,12 +11,46 @@
     <EditText
         android:id="@+id/etName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter name"
+        android:layout_height="48dp"
+        android:hint="@string/enter_name"
+        android:inputType="text"
+        android:autofillHints="@string/enter_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/enter_phone_number"
+        android:autofillHints="@string/enter_phone_number"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <CheckBox
+        android:id="@+id/cbAvailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/available"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        android:layout_margin="16dp" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ver_contactos"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/cbAvailable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
     <!-- add the rest of the fields -->
 
@@ -27,7 +61,7 @@
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/filterButton"
         app:layout_constraintBottom_toBottomOf="parent"
         />
 
