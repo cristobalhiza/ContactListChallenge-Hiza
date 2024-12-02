@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setRecyclerViewAdapter(contactList)
 
-        // Find views
         val etName = findViewById<EditText>(R.id.etName)
         val etPhone = findViewById<EditText>(R.id.etPhone)
         val cbAvailable = findViewById<CheckBox>(R.id.cbAvailable)
@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         val btnFilterAvailable = findViewById<Button>(R.id.filterButton)
 
         generateInitialContacts()
-        setRecyclerViewAdapter(contactList)
 
         fabAddContact.setOnClickListener {
             addContact(etName, etPhone, cbAvailable)
